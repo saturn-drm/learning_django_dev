@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+首页
+{% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        {% for article in articles %}
+        <div class="col-4">
+            <div class="card">
+                <h4>{{ article.title }}</h4>
+                <div class="card-body">
+                    <p>{{ article.body|slice:'100' }}...</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#">阅读本文</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static '/css/bootstrap-grid.css' %}">
+</head>
+
+<body>
+    {% include 'header.html' %}
+    {% block content %}{% endblock content %}
+    {% include 'footer.html' %}
+</body>
+
+</html>
