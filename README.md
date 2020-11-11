@@ -47,7 +47,7 @@ The instructions I'm following:
 
 * Directory: `leaning_django_dev/zmei_django_dev/zmei_django_dev`
 
-  * `setting.py`
+  * `settings.py`
 
     add "APP_name" to `INSTALLED_APPS` list
 
@@ -99,4 +99,23 @@ class ArticlePost(models.Model):
 > Reference: [Django搭建个人博客：编写博客文章的Model模型](https://www.dusaiphoto.com/article/11/)
 
 * Remember run command `migrate`
+
+### Modify `views.py`
+
+* `APP_name/views.py`
+
+  * import `HttpResponse` from `django.http`
+  * `def view_function`
+
+* `APP_name/urls.py`
+
+  * import `views` from `.`
+
+  * add url to the list of `urlpatterns`
+
+    `path('view_function/', views.view_function, name='view_function'),`
+
+### Structure
+
+1. When rendering a template, remember to add the path to `settings.py`
 
