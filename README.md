@@ -6,6 +6,7 @@ The instructions I'm following:
 
 * [Django搭建个人博客, Dusai's Blog](https://www.dusaiphoto.com/article/2/)
 * [Django documentation](https://docs.djangoproject.com/en/3.1/)
+* [刘江的博客教程: Django 教程](https://www.liujiangblog.com/course/django/2)
 
 ## Notes
 
@@ -32,7 +33,19 @@ The instructions I'm following:
   ```
   
 
+> 2020-11-18
+
+**What to do after adding a subdomain to another server**
+
+* namecheap DNS
+* server Nginx settings
+* server SSL encryption
+* sitemap and google console
+* google analytic
+
 ## Brief Conclusions
+
+> 2020-11-18 update: contents below are used as simple reference, preferred structure and coding might not be exactly the same.
 
 ### Create a project
 
