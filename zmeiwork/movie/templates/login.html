@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Login
+{% endblock title %}
+
+{% block style %}
+<link href="{% static 'css/login.css' %}" rel="stylesheet">
+<!-- <link href="{% static 'css/bootstrap-grid.min.css' %}" rel="stylesheet"> -->
+{% endblock style %}
+
+{% block content %}
+<div class="container">
+    <div class="col">
+        <form class="form-login" action="/movie/login/" method="post">
+            {% csrf_token %}
+            <h1 class="text-center">Welcome!</h1>
+            <div class="form-group">
+                <label for="id_username">Username: </label>
+                <input type="text" name="username" class="form-control" id="id_username" placeholder="Username" autofocus required>
+            </div>
+            <div class="form-group">
+                <label for="id_password">Password: </label>
+                <input type="password" name="password" class="form-control" id="id_password" placeholder="Password" required>
+            </div>
+            <div class="lastrow">
+                <a href="/movie/register/" class="text-success"><ins>Register</ins></a>
+                <button type="submit" class="btn">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}
